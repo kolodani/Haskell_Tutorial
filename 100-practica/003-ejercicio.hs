@@ -11,7 +11,10 @@ de cuatro. (Diccionario de la Real Academia Espaola, 22ª ed.)
 
 bisiesto :: Int -> String
 bisiesto x
-  | mod x 400 == 0 = "Es bisiesto"
-  | mod x 100 == 0 = "No es bisiesto"
-  | mod x 4 == 0 = "Es bisiesto"
-  | otherwise = "No es bisiesto"
+    | mod x 400 == 0 = "Es bisiesto"
+    | mod x 100 == 0 = "No es bisiesto"
+    | mod x 4 == 0 = "Es bisiesto"
+    | otherwise = "No es bisiesto"
+
+bisiesto2 :: Int -> String
+bisiesto2 x = if (mod x 400 == 0) || (mod x 4 == 0) && not (mod x 100 == 0) then "Es Bisiesto" else "No es Bisiesto"
