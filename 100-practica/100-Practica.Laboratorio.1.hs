@@ -3,14 +3,6 @@ module Practica0 where
 import Data.List
 
 {-
-6) El producto escalar de dos listas de enteros de igual longitud
-es la suma de los productos de los elementos sucesivos (misma
-posición) de ambas listas.  Definir una función 'scalarProduct' que
-devuelva el producto escalar de dos listas.
-
-Sugerencia: Usar las funciones 'zip' y 'sum'. -}
-
-{-
 7) Sin usar funciones definidas en el
 preludio, defina recursivamente las siguientes funciones y
 determine su tipo más general:
