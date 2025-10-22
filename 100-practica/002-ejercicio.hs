@@ -65,6 +65,10 @@ vabs x
     | otherwise = "0 no tiene signo"
         where resul = sign x
 
+vabsn :: Int -> String
+vabsn x = if x > 0 then "Positivo" else
+            if x < 0 then "Negativo" else "0 Sin signo"
+
 {-
     h) pot, que toma un entero y un número, y devuelve el resultado de
     elevar el segundo a la potencia dada por el primero
@@ -86,6 +90,12 @@ max3 x y z
     | x >= y && x >= z = x
     | y >= x && y >= z = y
     | otherwise = z
+
+max2 :: Int -> Int -> Int
+max2 x y = if x > y then x else y
+
+max3a :: Int -> Int -> Int -> Int
+max3a x y z = max2 x (max2 y z)
 
 {-
     k) swap, que toma un par y devuelve el par con sus componentes invertidas
