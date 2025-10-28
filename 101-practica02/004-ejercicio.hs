@@ -1,5 +1,5 @@
 {-
-4. Dar el tipo de la siguiente funciones o expresiones:
+    4. Dar el tipo de la siguiente funciones o expresiones:
 -}
 
 -- a) foo1 p = if p then (p ∧) else (p ∧)

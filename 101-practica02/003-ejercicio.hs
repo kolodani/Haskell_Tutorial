@@ -1,5 +1,5 @@
 {-
-3. Dar dos ejemplos de funciones que tengan los siguientes tipos:
+    3. Dar dos ejemplos de funciones que tengan los siguientes tipos:
 -}
 
 -- a) (Int → Int) → (Bool → Bool)
@@ -7,20 +7,20 @@
 -- función auxiliar para usar en el ejemplo a
 signoNumero :: Int -> Int
 signoNumero x
-  | x > 0 = 1
-  | x < 0 = -1
-  | otherwise = 0
+    | x > 0 = 1
+    | x < 0 = -1
+    | otherwise = 0
 
 -- función que recibe una función que recibe un entero y devuelve un entero, y devuelve una función que recibe un booleano y devuelve un booleano
 signoBool :: (Int -> Int) -> (Bool -> Bool)
 signoBool f a
-  | a = f 1 > 0
-  | otherwise = f 0 > 0
+    | a = f 1 > 0
+    | otherwise = f 0 > 0
 
 esCero :: (Int -> Int) -> (Bool -> Bool)
 esCero f a
-  | a = f 0 == 0
-  | otherwise = f 1 == 0
+    | a = f 0 == 0
+    | otherwise = f 1 == 0
 
 -- b) Bool → (Int → Bool)
 -- en este caso, la función recibe un booleano y devuelve una función que recibe un entero y devuelve un booleano
@@ -31,13 +31,13 @@ esPar x = mod x 2 == 0
 -- función que recibe un booleano y devuelve una función que recibe un entero y devuelve un booleano
 esParBool :: Bool -> (Int -> Bool)
 esParBool a x
-  | a = esPar x
-  | otherwise = not (esPar x)
+    | a = esPar x
+    | otherwise = not (esPar x)
 
 esImparBool :: Bool -> (Int -> Bool)
 esImparBool a x
-  | a = not (esPar x)
-  | otherwise = esPar x
+    | a = not (esPar x)
+    | otherwise = esPar x
 
 -- c) Char → Char
 convertirA :: Char -> Char
@@ -95,20 +95,20 @@ esNaturalLista xs f = concat [y | y <- xs, f (head y)]
 -- en este caso, la función recibe una tupla de tres elementos de tipo a y devuelve un booleano
 positivos :: (Int, Int, Int) -> Bool
 positivos (a, b, c)
-  | a > 0 && b > 0 && c > 0 = True
-  | otherwise = False
+    | a > 0 && b > 0 && c > 0 = True
+    | otherwise = False
 
 repetidas :: (Char, Char, Char) -> Bool
 repetidas (a, b, c)
-  | a == b || a == c || b == c = True
-  | otherwise = False
+    | a == b || a == c || b == c = True
+    | otherwise = False
 
 -- h) (a, b, c) → Int → c
 -- en este caso, la función recibe una tupla de tres elementos de tipo a y devuelve una función que recibe un entero y devuelve un elemento de tipo c
 igualitos :: Int -> Int -> Int
 igualitos x y
-  | x == y = 1
-  | otherwise = 0
+    | x == y = 1
+    | otherwise = 0
 
 elementoIgual :: (Int, Int, Int) -> Int -> Int
 elementoIgual (a, b, c) x = sum [igualitos a x, igualitos b x, igualitos c x]
@@ -130,14 +130,14 @@ xor' _ _ = True
 
 usoXor :: (Bool, Bool, Bool) -> Int -> Bool
 usoXor (a, b, c) x
-  | x == 1 = xor a b
-  | x == 2 = xor b c
-  | x == 3 = xor a c
-  | otherwise = False
+    | x == 1 = xor a b
+    | x == 2 = xor b c
+    | x == 3 = xor a c
+    | otherwise = False
 
 usoXor' :: (Bool, Bool, Bool) -> Int -> Bool
 usoXor' (a, b, c) x
-  | x == 1 = xor' a b
-  | x == 2 = xor' b c
-  | x == 3 = xor' a c
-  | otherwise = False
+    | x == 1 = xor' a b
+    | x == 2 = xor' b c
+    | x == 3 = xor' a c
+    | otherwise = False
